@@ -11,14 +11,55 @@
             color: red;
             transition: all .3s ease;
         }
+        /* p{
+            width: 30%;
+        } */
+        h1{
+            text-transform: uppercase;
+        }
+        .main{
+            line-height: 1.6;
+            display: grid;
+            place-items: center;
+            /* min-height: 100vh; */
+            background: pink;
+            margin: 0 auto;
+        }
+        .Enterguess{
+            padding: 0 2rem;
+            width: 121px;
+            height: 21px;
+        }
         .style:hover{
             color: blue;
             font-size: 2rem;
         }
+        .vim{
+            border: 2px solid green;
+            padding: .9rem 1.2rem;
+            background-color: yellowgreen;
+        }
     </style>
+<script src="./main.js" defer></script>
 </head>
 <body>
-        <!-- <button id="number" type="submit">number</button> -->
+    <div class="main">
+        <h1>Number guessing Game</h1>
+        <p spellcheck="true">We have selected a random number between 1-100. see if you can guess in 10 trials or fewer.
+            We'll tell you if your guess was too high or low.
+        </p>
+        <div class="form">
+            <label for="Enterguess">
+                Enter a guess:
+            </label>
+            <input  type="number" min="1" max="100" name="" id="Enterguess" placeholder="enter guess here" class="Enterguess">
+            <input type="submit" value="submit guess" class="guess-submit">    
+        </div>
+        <div class="result-para">
+            <p class="guesses"></p>
+            <p class="lastresult"></p>
+            <p class="loHi"></p>
+        </div>
+    </div>
 </body>
-<script src="./main.js"></script>
 </html>
